@@ -6,7 +6,6 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-// Define the main class for the application
 mainClassName = 'ch.so.agi.interlis.App'
 
 dependencies {
