@@ -7,7 +7,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'ch.so.agi.interlis.App'
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.25'
