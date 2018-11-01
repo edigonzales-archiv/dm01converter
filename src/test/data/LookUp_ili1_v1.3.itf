@@ -1,0 +1,487 @@
+SCNT
+////
+MTID INTERLIS1
+MODL LookUp_ili1_v13
+TOPI Lookup_tables
+TABL Mark_type
+OBJE 55 0 Stein borne termine_cippo boundary_marker
+OBJE 56 1 Kunststoffzeichen borne_artificielle termine_artificiale artificial_boundary_marker
+OBJE 57 2 Bolzen cheville bullone bolt
+OBJE 58 3 Rohr tuyau tubo tube
+OBJE 59 4 Pfahl pieu palo_picchetto stake
+OBJE 60 5 Kreuz croix croce_scolpito cross
+OBJE 61 6 unversichert non_materialise non_materializzato not_materialized
+OBJE 62 7 weitere autre altro other
+OBJE 63 8 undefiniert indefini non_definito undefined
+ETAB
+TABL Reliability_type
+OBJE 71 0 ja oui si yes
+OBJE 72 1 nein non no no
+ETAB
+TABL QualityStandard_type
+OBJE 400 0 AV93 MO93 MU93 AV93
+OBJE 401 1 PV74 MP74 MP74 PV74
+OBJE 402 2 PN NP DP PN
+OBJE 403 3 PEP PRP PRP PEP
+OBJE 404 4 weitere autre altro other
+ETAB
+TABL Validity_type
+OBJE 64 0 projektiert projete in_progetto planned
+OBJE 65 1 gueltig valable valevole valid
+ETAB
+TABL Text_type
+OBJE 75 0 Nummer Numero Numero Number
+OBJE 76 1 Name Nom Nome Name
+ETAB
+TABL Boolean_type
+OBJE 73 0 nein non no no
+OBJE 74 1 ja oui si yes
+ETAB
+TABL Control_point_Category
+OBJE 347 0 LFP1 PFP1 PFP1 PCP1
+OBJE 348 1 HFP1 PFA1 PFA1 ACP1
+OBJE 349 2 LFP2 PFP2 PFP2 PCP2
+OBJE 350 3 HFP2 PFA2 PFA2 ACP2
+OBJE 351 4 LFP3 PFP3 PFP3 PCP3
+OBJE 352 5 HFP3 PFA3 PFA3 ACP3
+ETAB
+TABL LCS_type
+OBJE 408 0 Gebaeude batiment edificio buildings
+OBJE 409 1 Strasse_Weg route_chemin strada_sentiero roads_tracks
+OBJE 410 2 Trottoir trottoir marciapiede pavements
+OBJE 411 3 Verkehrsinsel ilot spartitraffico traffic_islands
+OBJE 412 4 Bahn chemin_de_fer ferrovia railways
+OBJE 413 5 Flugplatz place_aviation aeroporto airfields
+OBJE 414 6 Wasserbecken bassin bacino_idrico basins
+OBJE 415 7 uebrige_befestigte autre_revetement_dur altro_rivestimento_duro other_hard-surfaced
+OBJE 416 8 Acker_Wiese_Weide champ_pre_paturage campo_prato_pascolo arable_meadow_pasture
+OBJE 417 9 Reben vigne vigna vineyards
+OBJE 418 10 uebrige_Intensivkultur autre_culture_intensive altra_coltura_intensiva intensive_cultivation
+OBJE 419 11 Gartenanlage jardin giardino garden
+OBJE 420 12 Hoch_Flachmoor tourbiere torbiera bog_swamp
+OBJE 421 13 uebrige_humusierte autre_verte altro_humus other_vegetated
+OBJE 422 14 Gewaesser_stehendes eau_stagnante specchio_acqua standing_water
+OBJE 423 15 Gewaesser_fliessendes cours_eau corso_acqua flowing_water
+OBJE 424 16 Schilfguertel roseliere canneti reed_belts
+OBJE 425 17 geschlossener_Wald foret_dense bosco_fitto dense_forest
+OBJE 426 18 Wytweide_dicht paturage_boise_dense pascolo_boscato_fitto pasture_dense
+OBJE 427 19 Wytweide_offen paturage_boise_ouvert pascolo_boscato_rado pasture_open
+OBJE 428 20 uebrige_bestockte autre_boisee altro_bosco other_wooded
+OBJE 429 21 Fels rocher roccia rock
+OBJE 430 22 Gletscher_Firn glacier_neve ghiacciaio_nevaio glacier_firn
+OBJE 431 23 Geroell_Sand eboulis_sable pietraia_sabbia boulders_scree_sand
+OBJE 432 24 Abbau_Deponie graviere_decharge cava_di_ghiaia_discarica quarries_landfill
+OBJE 433 25 uebrige_vegetationslose autre_sans_vegetation altra_senza_vegetazione other_unvegetated
+ETAB
+TABL SO_type
+OBJE 353 0 Mauer mur muro wall
+OBJE 354 1 unterirdisches_Gebaeude batiment_souterrain edificio_sotterraneo underground_structure
+OBJE 355 2 uebriger_Gebaeudeteil autre_corps_de_batiment altra_parte_di_edificio other_portion_of_building
+OBJE 356 3 eingedoltes_oeffentliches_Gewaesser eau_canalisee_souterraine acqua_sotterranea_canalizzata public_subsurface_drainage_channel
+OBJE 357 4 wichtige_Treppe escalier_important scala_importante important_steps
+OBJE 358 5 Tunnel_Unterfuehrung_Galerie tunnel_passage_inferieur_galerie tunnel_sottopassaggio_galleria tunnel_underpass_gallery
+OBJE 359 6 Bruecke_Passerelle pont_passerelle ponte_passerella bridge_footbridge
+OBJE 360 7 Bahnsteig quai banchina station_platform
+OBJE 361 8 Brunnen fontaine fontana fountain_well
+OBJE 362 9 Reservoir reservoir serbatoio reservoir
+OBJE 363 10 Pfeiler pilier pilastro pillar
+OBJE 364 11 Unterstand couvert_independant riparo shelter
+OBJE 365 12 Silo_Turm_Gasometer silo_tour_gazometre silo_torre_gasometro silo_tower_gasometer
+OBJE 366 13 Hochkamin cheminee ciminiera chimney
+OBJE 367 14 Denkmal monument monumento monument
+OBJE 368 15 Mast_Antenne mat_antenne palo_antenna mast_antenna
+OBJE 369 16 Aussichtsturm tour_panoramique torre_panoramica observation_tower
+OBJE 370 17 Uferverbauung ouvrage_de_protection_des_rives arginatura bank_protection_works
+OBJE 371 18 Schwelle seuil briglia ramp_sill
+OBJE 372 19 Lawinenverbauung paravalanche riparo_antivalanghe constructions_to_avoid_avalanches
+OBJE 373 20 massiver_Sockel socle_massif zoccolo_massiccio plinth
+OBJE 374 21 Ruine_archaeologisches_Objekt ruine_objet_archeologique rovina_oggetto_archeologico archaeological_object_ruin
+OBJE 375 22 Landungssteg debarcadere debarcadero landing_stage
+OBJE 376 23 einzelner_Fels bloc_erratique masso_erratico isolated_rock
+OBJE 377 24 schmale_bestockte_Flaeche cordon_boise fascia_boscata small_stand_of_trees
+OBJE 378 25 Rinnsal ru ruscello runlet
+OBJE 379 26 schmaler_Weg sentier sentiero track_path
+OBJE 380 27 Hochspannungsfreileitung ligne_aerienne_a_haute_tension linea_aerea_ad_alta_tensione overhead_power_line
+OBJE 381 28 Druckleitung conduite_forcee condotta_forzata above-ground_hydro-power_pipe
+OBJE 382 29 Bahngeleise voie_ferree binari_ferrovia railway
+OBJE 383 30 Luftseilbahn telepherique teleferica aerial_ropeway
+OBJE 384 31 Gondelbahn_Sesselbahn telecabine_telesiege telecabina_seggiovia cable_car_chairlift
+OBJE 385 32 Materialseilbahn telepherique_de_chantier teleferica_per_il_materiale industrial_cableway
+OBJE 386 33 Skilift skilift scilift ski-lift
+OBJE 387 34 Faehre bac traghetto ferry
+OBJE 388 35 Grotte_Hoehleneingang grotte_entree_de_caverne grotta_entrata_di_caverna cave_pothole_entrance
+OBJE 389 36 Achse axe asse main_road
+OBJE 390 37 wichtiger_Einzelbaum arbre_isole_important albero_importante important_tree
+OBJE 391 38 Bildstock_Kruzifix statue_crucifix cappella_statua_crocifisso shrine_crucifix
+OBJE 392 39 Quelle source sorgente spring
+OBJE 393 40 Bezugspunkt point_de_reference punto_di_riferimento public_authority_reference_point
+OBJE 394 41 weitere autre altro other_miscellaneous_single_objects
+ETAB
+TABL RealEstate_type
+OBJE 395 0 Baurecht DDP_superficie DPSSP_superficie distinct_and_permanent_rights
+OBJE 396 1 Quellenrecht source sorgente rights_to_spring_water
+OBJE 397 2 Konzessionsrecht concession concessione concession
+OBJE 398 3 weitere autre altro other
+OBJE 399 4 Bergwerk mine miniera mineral_rights
+ETAB
+TABL Completeness_type
+OBJE 341 0 vollstaendig complet completo complete
+OBJE 342 1 unvollstaendig incomplet incompleto incomplete
+ETAB
+TABL Fluid_type
+OBJE 77 0 Oel petrole petrolio oil
+OBJE 78 1 Gas gaz gas gas
+OBJE 79 2 weitere autre altro other
+ETAB
+TABL Bound_validity_type
+OBJE 0 0 rechtskraeftig en_vigueur in_vigore in_effect
+OBJE 1 1 streitig litigieux contestato disputed
+OBJE 2 2 provisorisch provisoire provvisorio provisional
+OBJE 3 3 undefiniert indefini non_precisato undefined
+ETAB
+TABL Terrain_edge_type
+OBJE 434 0 Bruchkante ligne_de_rupture linea_di_rottura breaklines
+OBJE 435 1 Strukturlinie ligne_de_structure linea_di_struttura structure_lines
+OBJE 436 2 weitere autre altro other
+ETAB
+TABL Cut_out_surface_type
+OBJE 66 0 ToteFlaeche surface_morte superficie_morta void
+OBJE 67 1 weitere autre altro other
+ETAB
+TABL Local_names_type
+OBJE 68 0 Flurname Nom_local Nome_locale Local_geographical_name
+OBJE 69 1 Ortsname Nom_de_lieu Nome_di_localita Place_name
+OBJE 70 2 Gelaendename Lieudit Nome_del_luogo Name_of_locality
+ETAB
+TABL Territorial_bound_Line_type
+OBJE 343 0 rechtskraeftig en_vigueur in_vigore in_effect
+OBJE 344 1 streitig litigieux contestato disputed
+OBJE 345 2 provisorisch provisoire provvisorio provisional
+OBJE 346 3 undefiniert indefini non_precisato undefined
+ETAB
+TABL Other_territorial_bound_type
+OBJE 405 0 Bezirksgrenzen Limites_district Confini_distrettuali District_boundary
+OBJE 406 1 Kantonsgrenzen Limites_canton Confini_cantonali Cantonal_boundary
+OBJE 407 2 Landesgrenzen Limites_nationales Confini_nazionali National_boundary
+ETAB
+TABL Topic_name
+OBJE 45 1 FixpunkteKategorie Points_fixesCategorie Punti_fissiCategoria Control_points
+OBJE 46 2 Bodenbedeckung Couverture_du_sol Copertura_del_suolo Land_cover
+OBJE 47 3 Einzelobjekte Objets_divers Oggetti_singoli Single_objects
+OBJE 48 4 Hoehen Altimetrie Altimetria Heights
+OBJE 49 5 Nomenklatur Nomenclature Nomenclatura Local_names
+OBJE 50 6 Liegenschaften Biens_fonds Beni_immobili Ownership
+OBJE 51 7 Rohrleitungen Conduites Condotte Pipelines
+OBJE 52 8 Hoheitsgrenzen Limites_territoriales Confini_giurisdizionali Territorial_boundaries
+OBJE 53 9 Gebaeudeadressen Adresses_des_batiments Indirizzi_degli_edifici Building_addresses
+OBJE 54 10 Metadaten Metadonnees Metadati Metadata
+ETAB
+TABL Classe_name
+OBJE 4 0 0 DOMAIN DOMAIN DOMAIN DOMAIN
+OBJE 5 1 1 LFP PFP PFP Control_point
+OBJE 6 2 2 BoFlaeche SurfaceCS SuperficieCS LCSurface
+OBJE 7 3 2 BBText TexteCS CSTesto LCSurface_PosText
+OBJE 8 4 2 ProjBoFlaeche SurfaceCSProj SuperficieCSProg LCSurfaceProj
+OBJE 9 5 2 ProjBBText TexteCSProj CSTestoProj LCSurfaceProj_PosText
+OBJE 10 6 3 Flaechenelement Element_surfacique Elemento_con_superficie Surface_element
+OBJE 11 7 3 FlaechenelementText TexteElement_surf TestoEl_con_superficie Surface_element_PosText
+OBJE 12 8 3 Linienelement Element_lineaire Elemento_lineare Linear_element
+OBJE 13 9 3 LinienelementText TexteElement_lineaire TestoEl_lineare Linear_element_PosText
+OBJE 14 10 3 Punktelement Element_ponctuel Elemento_puntiforme Point_element
+OBJE 15 11 3 PunktelementText TexteElement_ponct TextElemento_punt Point_element_PosText
+OBJE 16 12 4 Hoehenpunkt Point_cote Punto_quotato Individual_point
+OBJE 17 13 4 Gelaendekante Arete Linea Terrain_edge
+OBJE 18 14 4 Aussparung Surface_vide Superficie_vuota Cut_out_surface
+OBJE 19 15 4 Hoehenkurven Courbe_niveau Curve_di_livello Contour_line
+OBJE 20 16 5 Namen Noms Nome Names
+OBJE 21 17 5 NamenPos PosNoms PosNome Names_PosName
+OBJE 22 18 6 Grenzpunkt Point_limite Punto_di_confine Boundary_point
+OBJE 23 19 6 Liegenschaft Bien_fonds Bene_immobile RealEstate
+OBJE 24 20 6 LiegenschaftPos PosBien_fonds PosBene_immobile RealEstate_PosNumber
+OBJE 25 21 6 SelbstRecht-Bergwerk DDP-Mine DPSSP-Miniera DPR_Mine
+OBJE 26 22 6 SelbstRecht-BergwerkPos PosDDP-Mine PosDPSSP-Miniera DPR_Mine_PosNumber
+OBJE 27 23 6 ProjLiegenschaft Bien_fondsProj Bene_immobileProg RealEstateProj
+OBJE 28 24 6 ProjLiegenschaftPos PosBien_fondsProj PosBene_immobileProg RealEstateProj_PosNumber
+OBJE 29 25 6 ProjSelbstRecht-Bergwerk DDP-MineProj DPSSP-MinieraProg DPR_MineProj
+OBJE 30 26 6 ProjSelbstRecht-BergwerkPos PosDDP-MineProj PosDPSSP-MinieraProg DPR_MineProj_PosNumber
+OBJE 31 27 7 Flaechenelement Element_surfacique Elemento_con_superficie Surface_element
+OBJE 32 28 7 FlaechenelementNamePos Pos_Nom_Element_surfacique Elemento_con_superficie_nome_pos Surface_element_PosName
+OBJE 33 29 7 Linienelement Element_lineaire Elemento_lineare Linear_element
+OBJE 34 30 7 LinienelementNamePos Pos_Nom_Element_lineaire Elemento_lineare_nome_pos Linear_element_PosName
+OBJE 35 31 7 Punktelement Element_ponctuel Elemento_puntiforme Point_element
+OBJE 36 32 8 Hoheitsgrenzpunkt Point_limite_ter PCGiurisdizionale Boundary_terr_point
+OBJE 37 33 8 Gemeindegrenze Limite_commune Confine_comunale Municipal_boundary
+OBJE 38 34 8 ProjGemeindegrenze Limite_communeProj Confine_comunaleProg Municipal_boundProj
+OBJE 39 35 8 Uebrigehoheitsgrenzen Autre_limite_territoriale Altri_confini_giurisdizionali Other_territ_boundary
+OBJE 40 36 9 LokalisationsName Nom_localisation Nome_localizzazione Street_name
+OBJE 41 37 9 LokalisationsNamePos PosNom_localisation PosNome_localizzazione Street_name_Pos
+OBJE 42 38 9 Gebaeudeeingang Entree_batiment Entrata_edificio Building_entrance
+OBJE 43 39 9 HausnummerPos PosNumero_maison PosNumero_casa Building_entrance_Pos
+OBJE 44 40 10 Metadaten Metadonnee Metadato Metadata
+ETAB
+TABL Attribute_name
+OBJE 80 0 0 0 LKoord CoordP CoordP CoordP
+OBJE 81 1 0 0 HKoord CoordA CoordA CoordA
+OBJE 82 2 0 0 Hoehe Altitude Quota Altitude
+OBJE 83 3 0 0 Rotation Rotation Rotazione Rotation
+OBJE 84 4 0 0 Genauigkeit Precision Precisione Accuracy
+OBJE 85 5 0 0 UUIDOID UUIDOID UUIDOID UUIDOID
+OBJE 86 6 1 1 Kategorie Categorie Categoria Category
+OBJE 87 7 1 1 NBIdent IdentDN IdentAN IdentND
+OBJE 88 8 1 1 Nummer Numero Numero Number
+OBJE 89 9 1 1 Geometrie Geometrie Geometria Geometry
+OBJE 90 10 1 1 LageGen PrecPlan PrecPlan Plan_accuracy
+OBJE 91 11 1 1 HoeheGeom GeomAlt GeomAlt Geom_alt
+OBJE 92 12 1 1 HoeheGen PrecAlt PrecAlt Alt_accuracy
+OBJE 93 13 1 1 Punktzeichen Signe Segno Mark
+OBJE 94 14 1 1 Stand_am Etat_le Stato_al State_of
+OBJE 95 15 1 1 BFSNr NoOFS NoUFS FOSNr
+OBJE 96 16 2 2 Geometrie Geometrie Geometria Geometry
+OBJE 97 17 2 2 Qualitaetsstandard Qualite StandardQualita Quality
+OBJE 98 18 2 2 Art Genre Genere Type
+OBJE 99 19 2 2 GWR_EGID RegBL_EGID REA_EGID RegBL_EGID
+OBJE 100 20 2 2 Stand_am Etat_le Stato_al State_of
+OBJE 101 21 2 2 BFSNr NoOFS NoUFS FOSNr
+OBJE 102 22 2 3 Typ Type Tipo Type
+OBJE 103 23 2 3 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 104 24 2 3 Pos Pos Pos Pos
+OBJE 105 25 2 3 Ori Ori Ori Ori
+OBJE 106 26 2 3 HAli HAli HAli HAli
+OBJE 107 27 2 3 VAli VAli VAli VAli
+OBJE 108 28 2 3 BFSNr NoOFS NoUFS FOSNr
+OBJE 109 29 2 4 Geometrie Geometrie Geometria Geometry
+OBJE 110 30 2 4 Qualitaetsstandard Qualite StandardQualita Quality
+OBJE 111 31 2 4 Art Genre Genere Type
+OBJE 112 32 2 4 GWR_EGID RegBL_EGID REA_EGID RegBL_EGID
+OBJE 113 33 2 4 Stand_am Etat_le Stato_al State_of
+OBJE 114 34 2 4 BFSNr NoOFS NoUFS FOSNr
+OBJE 115 35 2 5 Typ Type Tipo Type
+OBJE 116 36 2 5 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 117 37 2 5 Pos Pos Pos Pos
+OBJE 118 38 2 5 Ori Ori Ori Ori
+OBJE 119 39 2 5 HAli HAli HAli HAli
+OBJE 120 40 2 5 VAli VAli VAli VAli
+OBJE 121 41 2 5 BFSNr NoOFS NoUFS FOSNr
+OBJE 122 42 3 6 Gueltigkeit Validite Validita Validity
+OBJE 123 43 3 6 Typ Type Tipo Type
+OBJE 124 44 3 6 Geometrie Geometrie Geometria Geometry
+OBJE 125 45 3 6 Qualitaetsstandard Qualite StandardQualita Quality
+OBJE 126 46 3 6 GWR_EGID RegBL_EGID REA_EGID RegBL_EGID
+OBJE 127 47 3 6 Stand_am Etat_le Stato_al State_of
+OBJE 128 48 3 6 BFSNr NoOFS NoUFS FOSNr
+OBJE 129 49 3 7 Typ Type Tipo Type
+OBJE 130 50 3 7 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 131 51 3 7 Pos Pos Pos Pos
+OBJE 132 52 3 7 Ori Ori Ori Ori
+OBJE 133 53 3 7 HAli HAli HAli HAli
+OBJE 134 54 3 7 VAli VAli VAli VAli
+OBJE 135 55 3 7 BFSNr NoOFS NoUFS FOSNr
+OBJE 136 56 3 8 Gueltigkeit Validite Validita Validity
+OBJE 137 57 3 8 Typ Type Tipo Type
+OBJE 138 58 3 8 Geometrie Geometrie Geometria Geometry
+OBJE 139 59 3 8 Qualitaetsstandard Qualite StandardQualita Quality
+OBJE 140 60 3 8 Stand_am Etat_le Stato_al State_of
+OBJE 141 61 3 8 BFSNr NoOFS NoUFS FOSNr
+OBJE 142 62 3 9 Typ Type Tipo Type
+OBJE 143 63 3 9 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 144 64 3 9 Pos Pos Pos Pos
+OBJE 145 65 3 9 Ori Ori Ori Ori
+OBJE 146 66 3 9 HAli HAli HAli HAli
+OBJE 147 67 3 9 VAli VAli VAli VAli
+OBJE 148 68 3 9 BFSNr NoOFS NoUFS FOSNr
+OBJE 149 69 3 10 Gueltigkeit Validite Validita Validity
+OBJE 150 70 3 10 Typ Type Tipo Type
+OBJE 151 71 3 10 Geometrie Geometrie Geometria Geometry
+OBJE 152 72 3 10 Qualitaetsstandard Qualite StandardQualita Quality
+OBJE 153 73 3 10 Ori Ori Ori Ori
+OBJE 154 74 3 10 Stand_am Etat_le Stato_al State_of
+OBJE 155 75 3 10 BFSNr NoOFS NoUFS FOSNr
+OBJE 156 76 3 11 Typ Type Tipo Type
+OBJE 157 77 3 11 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 158 78 3 11 Pos Pos Pos Pos
+OBJE 159 79 3 11 Ori Ori Ori Ori
+OBJE 160 80 3 11 HAli HAli HAli HAli
+OBJE 161 81 3 11 VAli VAli VAli VAli
+OBJE 162 82 3 11 BFSNr NoOFS NoUFS FOSNr
+OBJE 163 83 4 12 Geometrie Geometrie Geometria Geometry
+OBJE 164 84 4 12 Stand_am Etat_le Stato_al State_of
+OBJE 165 85 4 13 Geometrie Geometrie Geometria Geometry
+OBJE 166 86 4 13 Typ Type Tipo Type
+OBJE 167 87 4 13 Stand_am Etat_le Stato_al State_of
+OBJE 168 88 4 14 Geometrie Geometrie Geometria Geometry
+OBJE 169 89 4 14 Typ Type Tipo Type
+OBJE 170 90 4 14 Stand_am Etat_le Stato_al State_of
+OBJE 171 91 4 15 Geometrie Geometrie Geometria Geometry
+OBJE 172 92 4 15 Hoehe Altitude Quota Altitude
+OBJE 173 93 4 15 Stand_am Etat_le Stato_al State_of
+OBJE 174 94 5 16 Kategorie Categorie Categoria Category
+OBJE 175 95 5 16 Name Nom Nome Name
+OBJE 176 96 5 16 Geometrie Geometrie Geometria Geometry
+OBJE 177 97 5 16 Typ Type Tipo Type
+OBJE 178 98 5 16 Stand_am Etat_le Stato_al State_of
+OBJE 179 99 5 16 BFSNr NoOFS NoUFS FOSNr
+OBJE 180 100 5 17 Kategorie Categorie Categoria Category
+OBJE 181 101 5 17 Name Nom Nome Name
+OBJE 182 102 5 17 Pos Pos Pos Pos
+OBJE 183 103 5 17 Ori Ori Ori Ori
+OBJE 184 104 5 17 HAli HAli HAli HAli
+OBJE 185 105 5 17 VAli VAli VAli VAli
+OBJE 186 106 5 17 BFSNr NoOFS NoUFS FOSNr
+OBJE 187 107 6 18 Geometrie Geometrie Geometria Geometry
+OBJE 188 108 6 18 Gueltigkeit Validite Validita Validity
+OBJE 189 109 6 18 LageGen PrecPlan PrecPlan Plan_accuracy
+OBJE 190 110 6 18 LageZuv FiabPlan AttendPlan Plan_reliability
+OBJE 191 111 6 18 Punktzeichen Signe Segno Mark
+OBJE 192 112 6 18 Stand_am Etat_le Stato_al State_of
+OBJE 193 113 6 18 BFSNr NoOFS NoUFS FOSNr
+OBJE 194 114 6 19 NBIdent IdentDN IdentAN IdentND
+OBJE 195 115 6 19 Nummer Numero Numero Number
+OBJE 196 116 6 19 EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID
+OBJE 197 117 6 19 Vollstaendigkeit Integralite Integralita Completeness
+OBJE 198 118 6 19 Flaechenmass Superficie Superficie Area
+OBJE 199 119 6 19 Geometrie Geometrie Geometria Geometry
+OBJE 200 120 6 19 Stand_am Etat_le Stato_al State_of
+OBJE 201 121 6 19 BFSNr NoOFS NoUFS FOSNr
+OBJE 202 122 6 20 NBIdent IdentDN IdentAN IdentND
+OBJE 203 123 6 20 Nummer Numero Numero Number
+OBJE 204 124 6 20 Pos Pos Pos Pos
+OBJE 205 125 6 20 Ori Ori Ori Ori
+OBJE 206 126 6 20 HAli HAli HAli HAli
+OBJE 207 127 6 20 VAli VAli VAli VAli
+OBJE 208 128 6 20 BFSNr NoOFS NoUFS FOSNr
+OBJE 209 129 6 21 NBIdent IdentDN IdentAN IdentND
+OBJE 210 130 6 21 Nummer Numero Numero Number
+OBJE 211 131 6 21 EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID
+OBJE 212 132 6 21 Vollstaendigkeit Integralite Integralita Completeness
+OBJE 213 133 6 21 Grundstuecksart Genre_Immeuble Genere_Fondo RealEstate_Type
+OBJE 214 134 6 21 Flaechenmass Superficie Superficie Area
+OBJE 215 135 6 21 Geometrie Geometrie Geometria Geometry
+OBJE 216 136 6 21 Stand_am Etat_le Stato_al State_of
+OBJE 217 137 6 21 BFSNr NoOFS NoUFS FOSNr
+OBJE 218 138 6 22 NBIdent IdentDN IdentAN IdentND
+OBJE 219 139 6 22 Nummer Numero Numero Number
+OBJE 220 140 6 22 Pos Pos Pos Pos
+OBJE 221 141 6 22 Ori Ori Ori Ori
+OBJE 222 142 6 22 HAli HAli HAli HAli
+OBJE 223 143 6 22 VAli VAli VAli VAli
+OBJE 224 144 6 22 BFSNr NoOFS NoUFS FOSNr
+OBJE 225 145 6 23 NBIdent IdentDN IdentAN IdentND
+OBJE 226 146 6 23 Nummer Numero Numero Number
+OBJE 227 147 6 23 EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID
+OBJE 228 148 6 23 Vollstaendigkeit Integralite Integralita Completeness
+OBJE 229 149 6 23 Flaechenmass Superficie Superficie Area
+OBJE 230 150 6 23 Geometrie Geometrie Geometria Geometry
+OBJE 231 151 6 23 Stand_am Etat_le Stato_al State_of
+OBJE 232 152 6 23 BFSNr NoOFS NoUFS FOSNr
+OBJE 233 153 6 24 NBIdent IdentDN IdentAN IdentND
+OBJE 234 154 6 24 Nummer Numero Numero Number
+OBJE 235 155 6 24 Pos Pos Pos Pos
+OBJE 236 156 6 24 Ori Ori Ori Ori
+OBJE 237 157 6 24 HAli HAli HAli HAli
+OBJE 238 158 6 24 VAli VAli VAli VAli
+OBJE 239 159 6 24 BFSNr NoOFS NoUFS FOSNr
+OBJE 240 160 6 25 NBIdent IdentDN IdentAN IdentND
+OBJE 241 161 6 25 Nummer Numero Numero Number
+OBJE 242 162 6 25 EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID EGRIS_EGRID
+OBJE 243 163 6 25 Vollstaendigkeit Integralite Integralita Completeness
+OBJE 244 164 6 25 Grundstuecksart Genre_Immeuble Genere_Fondo RealEstate_Type
+OBJE 245 165 6 25 Flaechenmass Superficie Superficie Area
+OBJE 246 166 6 25 Geometrie Geometrie Geometria Geometry
+OBJE 247 167 6 25 Stand_am Etat_le Stato_al State_of
+OBJE 248 168 6 25 BFSNr NoOFS NoUFS FOSNr
+OBJE 249 169 6 26 NBIdent IdentDN IdentAN IdentND
+OBJE 250 170 6 26 Nummer Numero Numero Number
+OBJE 251 171 6 26 Pos Pos Pos Pos
+OBJE 252 172 6 26 Ori Ori Ori Ori
+OBJE 253 173 6 26 HAli HAli HAli HAli
+OBJE 254 174 6 26 VAli VAli VAli VAli
+OBJE 255 175 6 26 BFSNr NoOFS NoUFS FOSNr
+OBJE 256 176 7 27 Betreiber Exploitant Gestore Operating_company
+OBJE 257 177 7 27 Art Genre Genere Fluid
+OBJE 258 178 7 27 Geometrie Geometrie Geometria Geometry
+OBJE 259 179 7 27 Gueltigkeit Validite Validita Validity
+OBJE 260 180 7 27 Stand_am Etat_le Stato_al State_of
+OBJE 261 181 7 27 BFSNr NoOFS NoUFS FOSNr
+OBJE 262 182 7 28 Betreiber Exploitant Gestore Operating_company
+OBJE 263 183 7 28 Pos Pos Pos Pos
+OBJE 264 184 7 28 Ori Ori Ori Ori
+OBJE 265 185 7 28 HAli HAli HAli HAli
+OBJE 266 186 7 28 VAli VAli VAli VAli
+OBJE 267 187 7 28 BFSNr NoOFS NoUFS FOSNr
+OBJE 268 188 7 29 Betreiber Exploitant Gestore Operating_company
+OBJE 269 189 7 29 Art Genre Genere Fluid
+OBJE 270 190 7 29 Geometrie Geometrie Geometria Geometry
+OBJE 271 191 7 29 Gueltigkeit Validite Validita Validity
+OBJE 272 192 7 29 Stand_am Etat_le Stato_al State_of
+OBJE 273 193 7 29 BFSNr NoOFS NoUFS FOSNr
+OBJE 274 194 7 30 Betreiber Exploitant Gestore Operating_company
+OBJE 275 195 7 30 Pos Pos Pos Pos
+OBJE 276 196 7 30 Ori Ori Ori Ori
+OBJE 277 197 7 30 HAli HAli HAli HAli
+OBJE 278 198 7 30 VAli VAli VAli VAli
+OBJE 279 199 7 30 BFSNr NoOFS NoUFS FOSNr
+OBJE 280 200 7 31 Betreiber Exploitant Gestore Operating_company
+OBJE 281 201 7 31 Art Genre Genere Fluid
+OBJE 282 202 7 31 Geometrie Geometrie Geometria Geometry
+OBJE 283 203 7 31 HoeheGeom GeomAlt GeomAlt Geom_alt
+OBJE 284 204 7 31 Ori Ori Ori Ori
+OBJE 285 205 7 31 Gueltigkeit Validite Validita Validity
+OBJE 286 206 7 31 Stand_am Etat_le Stato_al State_of
+OBJE 287 207 7 31 BFSNr NoOFS NoUFS FOSNr
+OBJE 288 208 8 32 Geometrie Geometrie Geometria Geometry
+OBJE 289 209 8 32 Gueltigkeit Validite Validita Validity
+OBJE 290 210 8 32 LageGen PrecPlan PrecPlan Plan_accuracy
+OBJE 291 211 8 32 LageZuv FiabPlan AttendPlan Plan_reliability
+OBJE 292 212 8 32 Punktzeichen Signe Segno Mark
+OBJE 293 213 8 32 Stand_am Etat_le Stato_al State_of
+OBJE 294 214 8 32 BFSNr NoOFS NoUFS FOSNr
+OBJE 295 215 8 33 Name Nom Nome Name
+OBJE 296 216 8 33 Geometrie Geometrie Geometria Geometry
+OBJE 297 217 8 33 Stand_am Etat_le Stato_al State_of
+OBJE 298 218 8 33 BFSNr NoOFS NoUFS FOSNr
+OBJE 299 219 8 34 Name Nom Nome Name
+OBJE 300 220 8 34 Geometrie Geometrie Geometria Geometry
+OBJE 301 221 8 34 Stand_am Etat_le Stato_al State_of
+OBJE 302 222 8 34 BFSNr NoOFS NoUFS FOSNr
+OBJE 303 223 8 35 Typ Type Tipo Type
+OBJE 304 224 8 35 Geometrie Geometrie Geometria Geometry
+OBJE 305 225 8 35 Gueltigkeit Validite Validita Bound_validity_Type
+OBJE 306 226 9 36 LokalisationsName Nom_localisation Nome_localizzazione Street_name
+OBJE 307 227 9 36 IstOffizielleBezeichnung Est_designation_officielle Designazione_ufficiale Is_official_designation
+OBJE 308 228 9 36 Stand_am Etat_le Stato_al State_of
+OBJE 309 229 9 36 BFSNr NoOFS NoUFS FOSNr
+OBJE 310 230 9 37 LokalisationsName Nom_localisation Nome_localizzazione Street_name
+OBJE 311 231 9 37 Pos Pos Pos Pos
+OBJE 312 232 9 37 Ori Ori Ori Ori
+OBJE 313 233 9 37 HAli HAli HAli HAli
+OBJE 314 234 9 37 VAli VAli VAli VAli
+OBJE 315 235 9 37 BFSNr NoOFS NoUFS FOSNr
+OBJE 316 236 9 38 Gueltigkeit Validite Validita Validity
+OBJE 317 237 9 38 Lage Pos Pos Pos
+OBJE 318 238 9 38 IstOffizielleBezeichnung Est_designation_officielle Designazione_ufficiale Is_official_designation
+OBJE 319 239 9 38 HoehenLage Niveau Quota Level
+OBJE 320 240 9 38 Hausnummer Numero_maison Numero_casa House_number
+OBJE 321 241 9 38 GebaeudeName Nom_batiment Nome_edificio Name_of_house
+OBJE 322 242 9 38 GWR_EGID RegBL_EGID REA_EGID RegBL_EGID
+OBJE 323 243 9 38 GWR_EDID RegBL_EDID REA_EDID RegBL_EDID
+OBJE 324 244 9 38 LokalisationsName Nom_localisation Nome_localizzazione Street_name
+OBJE 325 245 9 38 PLZ NPA CAP PostalCode
+OBJE 326 246 9 38 Zusatzziffern Chiffres_supplementaires Cifre_supplementari Additional_number
+OBJE 327 247 9 38 OrtschaftsName Nom_localite Nome_localita City
+OBJE 328 248 9 38 Stand_am Etat_le Stato_al State_of
+OBJE 329 249 9 38 BFSNr NoOFS NoUFS FOSNr
+OBJE 330 250 9 39 Typ Type Tipo Type
+OBJE 331 251 9 39 Number_Name Numero_Nom Numero_nome Number_Name
+OBJE 332 252 9 39 Pos Pos Pos Pos
+OBJE 333 253 9 39 Ori Ori Ori Ori
+OBJE 334 254 9 39 HAli HAli HAli HAli
+OBJE 335 255 9 39 VAli VAli VAli VAli
+OBJE 336 256 9 39 BFSNr NoOFS NoUFS FOSNr
+OBJE 337 257 10 40 Generiert_von Genere_de Generato_da Generated_from
+OBJE 338 258 10 40 Generiert_von_Basismodell Genere_de_modele_base Generato_da_modello_base Generated_based_model
+OBJE 339 259 10 40 Generiert_datum Genere_date Generato_data Generated_date
+OBJE 340 260 10 40 Weitere_Metadaten_information Autre_info_metadonnee Altra_informazione_metadato Other_metadata_information
+ETAB
+ETOP
+EMOD
+ENDE

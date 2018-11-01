@@ -222,6 +222,9 @@ public class DM01Converter {
 			String key = (String) it.next();
 
 			EnumerationType cantonalEnumType = (EnumerationType) inputEnumerations.get(key);
+			if (cantonalEnumType == null) {
+				throw new IllegalArgumentException("no enumerations found for: " + inputModelName);
+			}
 			EnumerationType federalEnumType = (EnumerationType) outputEnumerations.get(key);
 
 			HashMap mapping = new HashMap();
@@ -355,7 +358,7 @@ public class DM01Converter {
     	ch.interlis.ili2c.metamodel.TransferDescription iliTd = Ili2c.runCompiler(config);
 
 		if (iliTd == null) {
-			throw new IllegalArgumentException("INTERLIS compiler failed");
+			throw new IllegalArgumentException("INTERLIS compiler failed"); // TODO: can this be tested?
 		}
 		return iliTd;   
 	}
@@ -373,7 +376,7 @@ public class DM01Converter {
             if (ext.equalsIgnoreCase("itf")) {
                 ioxReader = new ItfReader(transferFile);
             } else {
-            	throw new IoxException("not a valid file exentension: " + new File(transferFileName).getName());
+            	throw new IllegalArgumentException("not a valid file extension: " + new File(transferFileName).getName());
             }
 
             IoxEvent event;
