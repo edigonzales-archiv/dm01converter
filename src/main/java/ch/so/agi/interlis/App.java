@@ -6,10 +6,6 @@ import ch.interlis.ili2c.Ili2cException;
 import ch.interlis.iox.IoxException;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
-
     public static void main(String[] args) {
         Logger log = LoggerFactory.getLogger(App.class);
          
