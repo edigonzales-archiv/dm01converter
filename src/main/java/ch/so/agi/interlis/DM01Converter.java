@@ -56,7 +56,7 @@ public class DM01Converter {
 	 * @throws IoxException
 	 * @throws Ili2cException
 	 */
-	public void convert(String inputFileName, String outputPath) throws IoxException, Ili2cException {
+	public void convert(String inputFileName, String outputPath) throws IoxException, Ili2cException, IllegalArgumentException {
 		convert(inputFileName, outputPath, "de");
 	}
 	
@@ -64,7 +64,7 @@ public class DM01Converter {
 	 * Since there is no language support at the moment, the method
 	 * is private.
 	 */
-	private void convert(String inputFileName, String outputPath, String language) throws IoxException, Ili2cException {
+	private void convert(String inputFileName, String outputPath, String language) throws IoxException, Ili2cException, IllegalArgumentException {
 		inputModelName = getModelNameFromTransferFile(inputFileName);		
 		iliTdInput = getTransferDescription(inputModelName);
 		tag2type = ch.interlis.iom_j.itf.ModelUtilities.getTagMap(iliTdInput);

@@ -1,0 +1,10 @@
+language: java
+
+branches:
+  only:
+    - master
+    - stable
+
+script:
+  - ./gradlew clean build 
+

@@ -11,11 +11,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
         Logger log = LoggerFactory.getLogger(App.class);
          
 		if (args.length != 2 ) {
-	        log.info("Missing parameters");
+	        log.error("Missing parameters");
 	        return;
 		}
 	
@@ -28,7 +27,7 @@ public class App {
 		DM01Converter dm01Converter = new DM01Converter();
 		try {
 			dm01Converter.convert(inputFileName, outputPath);
-		} catch (IoxException | Ili2cException e) {
+		} catch (IllegalArgumentException | IoxException | Ili2cException e) {
 			e.printStackTrace();
 		}
     }
