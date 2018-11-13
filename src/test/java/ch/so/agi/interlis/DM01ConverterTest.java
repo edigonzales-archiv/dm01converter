@@ -110,7 +110,7 @@ public class DM01ConverterTest {
         	DM01Converter dm01converter = new DM01Converter();
         	dm01converter.convert(file.getAbsolutePath(), outputFolderName);	
     	} catch(IllegalArgumentException e) {
-			assertTrue(e.getMessage().equals("no enumerations found for: LookUp_ili1_v13"));
+			assertTrue(e.getMessage().equals("no enumerations found for: PLZOrtschaft.OrtschaftsName.Sprache"));
     	}	
     }
     
