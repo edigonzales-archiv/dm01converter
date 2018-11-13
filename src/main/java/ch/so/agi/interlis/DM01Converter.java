@@ -105,35 +105,42 @@ public class DM01Converter {
 					inputTables = ch.interlis.iom_j.itf.ModelUtilities.getItfTables(iliTdInput, basket.getType().split("\\.")[0], basket.getType().split("\\.")[1]);                                        
 					outputTables = ch.interlis.iom_j.itf.ModelUtilities.getItfTables(iliTdOutput, outputStartBasketEvent.getType().split("\\.")[0], outputStartBasketEvent.getType().split("\\.")[1]);
 
-					ioxWriter.write(outputStartBasketEvent); 
+					// outputTables is null if input topic does not exist in output model.
+					if (outputTables != null) {
+						ioxWriter.write(outputStartBasketEvent); 
+					} 
+				} 
+				else if(event instanceof ObjectEvent) {
+					if (outputTables != null) {
+						IomObject iomObj = ((ObjectEvent)event).getIomObject();
+						String tag = iomObj.getobjecttag();
+						String tableName = tag.substring(tag.indexOf(".")+1);                                   
 
-				} else if(event instanceof ObjectEvent) {
-					IomObject iomObj = ((ObjectEvent)event).getIomObject();
-					String tag = iomObj.getobjecttag();
-					String tableName = tag.substring(tag.indexOf(".")+1);                                   
+						if (this.isOutputTable(tableName) == true) {
 
-					// What happens if topic does not exists?
-					// E.g. TG has some additional topic.
-					if (this.isOutputTable(tableName) == true) {
+							// Map cantonal enumeration to federal enumeration.
+							changeEnumeration(iomObj);
 
-						// Map cantonal enumeration to federal enumeration.
-						changeEnumeration(iomObj);
+							String tagOutput = outputModelName + "." + tableName;
+							iomObj.setobjecttag(tagOutput);                                         
 
-						String tagOutput = outputModelName + "." + tableName;
-						iomObj.setobjecttag(tagOutput);                                         
-
-						try {
-							ioxWriter.write(new ch.interlis.iox_j.ObjectEvent(iomObj));
-						} catch (IoxException ioxe) {
-							ioxe.printStackTrace();
+							try {
+								ioxWriter.write(new ch.interlis.iox_j.ObjectEvent(iomObj));
+							} catch (IoxException ioxe) {
+								ioxe.printStackTrace();
+							}
+						} else {
+							// do nothing...
+							// Table does not exist (but Topic does).
 						}
-					} else {
-						// do nothing...
-						// Table does not exist.
 					}
-
-				} else if(event instanceof EndBasketEvent) {
-					ioxWriter.write(new ch.interlis.iox_j.EndBasketEvent());
+				} 
+				else if(event instanceof EndBasketEvent) {
+					// Since the event is from the input model, we are not
+					// allowed to write it if the topic does not exist.
+					if (outputTables != null) {
+						ioxWriter.write(new ch.interlis.iox_j.EndBasketEvent());
+					}
 				} else if(event instanceof EndTransferEvent) {
 					ioxReader.close();    
 					ioxWriter.write(new ch.interlis.iox_j.EndTransferEvent());
@@ -181,11 +188,11 @@ public class DM01Converter {
 	 */
 	private void changeEnumeration(IomObject iomObj) {
 		Object tableObj = tag2type.get(iomObj.getobjecttag());
-
+		
 		if (tableObj instanceof AbstractClassDef) {
 			AbstractClassDef tableDef = (AbstractClassDef) tag2type.get(iomObj.getobjecttag());
 			ArrayList attrs = ch.interlis.iom_j.itf.ModelUtilities.getIli1AttrList(tableDef);
-
+			
 			Iterator attri = attrs.iterator(); 
 			while (attri.hasNext()) { 
 				ViewableTransferElement obj = (ViewableTransferElement)attri.next();
@@ -198,12 +205,17 @@ public class DM01Converter {
 					if (type instanceof EnumerationType) {
 						String tag = iomObj.getobjecttag();
 						String keyName = tag.substring(tag.indexOf(".")+1) + "." + attrName;
-
+						
 						HashMap enumerationMap = enumerationMappings.get(keyName);
 						String attrValue = iomObj.getattrvalue(attrName);
-						if (attrValue != null) {                                                        
-							String Ctcode = String.valueOf(enumerationMap.get(Integer.parseInt(attrValue)));
-							iomObj.setattrvalue(attrName, Ctcode);
+						if (attrValue != null) {  
+							try {
+								String Ctcode = String.valueOf(enumerationMap.get(Integer.parseInt(attrValue)));
+								iomObj.setattrvalue(attrName, Ctcode);
+							} catch (java.lang.NullPointerException e) {
+								// Enum not found. We assume that this attribute does not exist in federal table.
+								// Needed for GL.
+							}
 						}
 					}
 				}
@@ -220,10 +232,30 @@ public class DM01Converter {
 		Set keys = outputEnumerations.keySet();
 		for (Iterator it = keys.iterator(); it.hasNext();) {
 			String key = (String) it.next();
-
+						
 			EnumerationType cantonalEnumType = (EnumerationType) inputEnumerations.get(key);
 			if (cantonalEnumType == null) {
-				throw new IllegalArgumentException("no enumerations found for: " + inputModelName);
+				// Possible LineAttrib enumeration with a different counter (LineAttribXX).
+				// It will check if the first part of the fedral enum name and the last part can
+				// be found in the cantonal map with all enums.
+				// TODO: But I don't think that this works really properly in all cases. 
+				// (Since it is not really qualified)
+				// Needed for GL.
+				String[] parts = key.split("\\.");
+				String firstPart = parts[0];
+				String lastPart = parts[parts.length-1];
+
+				Set inputKeys = inputEnumerations.keySet();
+				for (Iterator jt = inputKeys.iterator(); jt.hasNext();) {
+					String inputKey = (String)jt.next();
+					if (inputKey.contains(firstPart) && inputKey.contains(lastPart)) {
+						cantonalEnumType = (EnumerationType) inputEnumerations.get(inputKey);
+					}
+				}
+				if (cantonalEnumType == null) {
+					throw new IllegalArgumentException("no enumerations found for: " + key);
+
+				}
 			}
 			EnumerationType federalEnumType = (EnumerationType) outputEnumerations.get(key);
 
