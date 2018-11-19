@@ -34,7 +34,8 @@ public class DM01Converter {
 	private ch.interlis.ili2c.metamodel.TransferDescription iliTdOutput = null;
 	private Map tag2type = null;
 	private String inputModelName = null;
-	private final String outputModelName = "DM01AVCH24LV95D";
+//    private final String outputModelName = "DM01AVCH24LV95D";
+    private static HashMap<String, String> outputModelNames;
 	private HashMap<String,EnumerationType> inputEnumerations = null;
 	private HashMap<String,EnumerationType> outputEnumerations = null;
 	private IoxReader ioxReader = null;
@@ -43,6 +44,12 @@ public class DM01Converter {
 	private ArrayList inputTables = null;
 	private ArrayList outputTables = null;
 	private EnumCodeMapper enumCodeMapper = new EnumCodeMapper();
+	
+    static {
+        outputModelNames = new HashMap<String, String>();
+        outputModelNames.put("de","DM01AVCH24LV95D");
+        outputModelNames.put("it","MD01MUCH24MN95I");
+    }
 
 	public DM01Converter() {}
 	
@@ -64,12 +71,26 @@ public class DM01Converter {
 	 * Since there is no language support at the moment, the method
 	 * is private.
 	 */
-	private void convert(String inputFileName, String outputPath, String language) throws IoxException, Ili2cException, IllegalArgumentException {
+	
+	
+    /**
+     * Converts surveying data from a cantonal INTERLIS model into the federal model. 
+     * A simple prefix ('ch_') will be added the to file name.
+     * LV95 and german/italian only at the moment.
+     * 
+     * @param inputFileName The file to convert
+     * @param outputPath The output path
+     * @param language The language (de, it)
+     * @throws IoxException
+     * @throws Ili2cException
+     */
+	public void convert(String inputFileName, String outputPath, String language) throws IoxException, Ili2cException, IllegalArgumentException {
 		inputModelName = getModelNameFromTransferFile(inputFileName);		
 		iliTdInput = getTransferDescription(inputModelName);
 		tag2type = ch.interlis.iom_j.itf.ModelUtilities.getTagMap(iliTdInput);
 		inputEnumerations = getEnumerations(iliTdInput);
-		
+			    
+	    String outputModelName = outputModelNames.get(language);	    
 		iliTdOutput = this.getTransferDescription(outputModelName);
 		outputEnumerations = getEnumerations(iliTdOutput);
 
