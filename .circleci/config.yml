@@ -43,7 +43,7 @@ jobs:
 
       # store artifacts
       - store_artifacts:
-          path: ~/repo/build/lib/
+          path: ~/repo/build/libs/
 
 
 
